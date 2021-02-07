@@ -49,7 +49,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero-button" type="button">Заказать услугу</button> 
+                <button class="hero-button" type="button" data-modal-open>Заказать услугу</button> 
             </div>
         </section>
 
@@ -102,9 +102,18 @@
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="section-list">
-                    <li class="section-list-item"><img src="./images/about-us/about-us-1.jpg" alt="написание кода" height="294" width="370"></li>
-                    <li class="section-list-item"><img src="./images/about-us/about-us-3.jpg" alt="дизайн на телефоне" height="294" width="370"></li>
-                    <li class="section-list-item"><img src="./images/about-us/about-us-2.jpg" alt="градиент" height="294" width="370"></li>
+                    <li class="section-list-item">
+                        <img src="./images/about-us/about-us-1.jpg" alt="написание кода" height="294" width="370">
+                        <p class="section-list-text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+                    </li>
+                    <li class="section-list-item">
+                        <img src="./images/about-us/about-us-3.jpg" alt="дизайн на телефоне" height="294" width="370">
+                        <p class="section-list-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+                    </li>
+                    <li class="section-list-item">
+                        <img src="./images/about-us/about-us-2.jpg" alt="градиент" height="294" width="370">
+                        <p class="section-list-text">ДИЗАЙНЕРСКИЕ ПРИЛОЖЕНИЯ</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -320,19 +329,21 @@
     <footer class="contact">
         <div class="container">
             <div class="footer-contact">
-            <a class="logo" href="/"> <span class="logo-one">Web</span><span class="logo-two-footer" >Studio</span></a>
-            <address class="contact-footer">
-                <ul class="contact-footer-list">
-                    <li class="contact-footer-list-item">
-                        <a class="contact-adress" href="https://goo.gl/maps/8Z3FRxRc7HxKLj288" target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
-                    </li>
-                    <li class="contact-footer-list-item">
-                        <a class="contact-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li class="contact-footer-list-item">
-                        <a class="contact-phone" href="tel:+380961111111">+38 096 111 11 11</a>
-                    </li>
-                </div>
+                <a class="logo" href="/"> <span class="logo-one">Web</span><span class="logo-two-footer" >Studio</span></a>
+                <address class="contact-footer">
+                    <ul class="contact-footer-list">
+                        <li class="contact-footer-list-item">
+                            <a class="contact-adress" href="https://goo.gl/maps/8Z3FRxRc7HxKLj288" target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
+                        </li>
+                        <li class="contact-footer-list-item">
+                            <a class="contact-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li class="contact-footer-list-item">
+                            <a class="contact-phone" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </address> 
+            </div>
                 <div class="footer-social">
                     <p class="footer-title">ПРИСОЕДИНЯЙТЕСЬ</p>
                     <ul class="footer-link">
@@ -366,10 +377,20 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            </ul>
-        </address>    
+            </div>   
     </footer>   
+    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="icon-close"  height="18" width="18">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
